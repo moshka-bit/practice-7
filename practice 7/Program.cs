@@ -201,16 +201,35 @@ namespace practice_7
             {
                 sum4 += i;
             }
+
+            int count2 = dict["Продукты"].Count();
+            int count3 = dict["Транспорт"].Count();
+            int count4 = dict["Развлечения"].Count();
+            if (count2 == 0)
+            {
+                count2 = 1;
+            }
+            if (count3 == 0)
+            {
+                count3 = 1;
+            }
+            if (count4 == 0)
+            {
+                count4 = 1;
+            }
+
+
             List<double> lst = new List<double>();
             lst.Add(sum2 / dict["Продукты"].Count());
             lst.Add(sum3 / dict["Транспорт"].Count());
             lst.Add(sum4 / dict["Развлечения"].Count());
+
             double sum_lst = 0;
             foreach (double i in lst)
             {
                 sum_lst += i;
             }
-            return sum_lst;
+            return (sum2 + sum3 + sum4) / 3;
         }
 
         public static void PredictNextMonthExpenses(double result_func)
