@@ -234,7 +234,7 @@ namespace practice_7
 
         public static void PredictNextMonthExpenses(double result_func)
         {
-            Console.WriteLine($"Прогнозируемые расходы на следующий месяц: {result_func * 10} руб.  ");
+            Console.WriteLine($"Прогнозируемые расходы на следующий месяц: {result_func * 30} руб.  ");
         }
 
         public static void PrintStatistics(Dictionary<string, List<double>> dict)
